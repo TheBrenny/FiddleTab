@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fiddle Tab FF9800</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/animations.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="shortcut icon" href="/img/fiddletab16.png">
+    <link rel="shortcut icon" type="image/png" sizes="19x19" href="/img/fiddletab19.png">
+    <link rel="shortcut icon" type="image/png" sizes="48x48" href="/img/fiddletab48.png">
+    <link rel="shortcut icon" type="image/png" sizes="128x128" href="/img/fiddletab128.png">
+</head>
+
+<body class="container">
+    <div class="row code container">
+        <div class="block">
+            <div class="title">
+                <h3>HTML</h3>
+                <div class="gearbox">
+                    <img class="gear" src="/img/gear.svg" title="Click to open/close">
+                </div>
+                <div class="dropdown hidden">
+                    <select name="htmlLangSelect" langtarget="htmleditor" class="lang">
+					</select>
+                    <select themetarget="htmleditor" class="theme">
+					</select>
+                    <input id="emmetBtn" type="button" value="Emmet: ON">
+                </div>
+            </div>
+            <div id="htmleditor" class="ace-holder"></div>
+        </div>
+        <div class="block">
+            <div class="title">
+                <h3>CSS</h3>
+                <div class="gearbox">
+                    <img class="gear" src="/img/gear.svg" title="Click to open/close">
+                </div>
+                <div class="dropdown hidden">
+                    <select name="cssLangSelect" langtarget="csseditor" class="lang">
+					</select>
+                    <select themetarget="csseditor" class="theme">
+					</select>
+                </div>
+            </div>
+            <div id="csseditor" class="ace-holder"></div>
+        </div>
+        <div class="block">
+            <div class="title">
+                <h3>JS</h3>
+                <div class="gearbox">
+                    <img class="gear" src="/img/gear.svg" title="Click to open/close">
+                </div>
+                <div class="dropdown hidden">
+                    <select name="jsLangSelect" langtarget="jseditor" class="lang">
+					</select>
+                    <select themetarget="jseditor" class="theme">
+					</select>
+                    <ul id="externaljslist" class="externallist">
+                    </ul>
+                    <input id="extjs" type="text" class="textforexternals" placeholder="External JS">
+                    <input id="addjs" type="button" class="addtoexternals" value="Add">
+                </div>
+            </div>
+            <div id="jseditor" class="ace-holder"></div>
+        </div>
+    </div>
+    <div class="row output container">
+        <div class="block">
+            <iframe id="sandbox" sandbox="allow-forms allow-modals allow-popups allow-pointer-lock allow-same-origin allow-scripts" src=""></iframe>
+            <div class="iframe-cover mousenotwork">
+                <div class="iframe-dragzone">
+                    <div class="gearbox">
+                        <img class="gear" src="/img/gear.svg" title="Click to open/close">
+                    </div>
+                </div>
+                <div class="dropdown hidden">
+                    <button id="resetsandbox">Reset Sandbox</button>
+                    <button id="toggleoutpause">Pause/Play Immediate Output</button>
+                    <button id="togglejs">Start/Stop Javascript Output</button>
+                    <span class="dd-thirds"><button class="open-fiddle" click="openFiddle" target="jsfid">Open on <img src="/img/logo_jsfiddle.svg" alt="JS Fiddle"></button></span>
+                    <span class="dd-thirds"><button class="open-fiddle" click="openFiddle" target="jsbin" title="tooltip">Open on <img src="/img/logo_jsbin.svg" alt="JS Bin"></button></span>
+                    <span class="dd-thirds"><button class="open-fiddle" click="openFiddle" target="codep">Open on <img src="/img/logo_codepen.svg" alt="CodePen"></button></span>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="title">
+                <h3>JS Console</h3>
+                <div class="gearbox">
+                    <img class="gear" src="/img/gear.svg" title="Click to open/close">
+                </div>
+                <div class="dropdown hidden">
+                    <select themetarget="jsconsole" class="theme">
+					</select>
+                </div>
+            </div>
+            <div id="jsconsole" class="ace-holder"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <script type="text/javascript" src="/js/main_prep.js"></script>
+    <script type="text/javascript" src="/js/ace/ace.js"></script>
+    <script type="text/javascript" src="/js/ace/ext-emmet.js"></script>
+    <script type="text/javascript" src="/js/ext-core/emmet.js"></script>
+    <script type="text/javascript" src="/js/preprocess/coffee.js"></script>
+    <script type="text/javascript" src="/js/preprocess/sass.js"></script>
+    <script type="text/javascript" src="/js/preprocess/less.js" data-async="true"></script>
+    <script type="text/javascript" src="/js/preprocess/haml.js"></script>
+    <script type="text/javascript" src="/js/mainJS/event_listeners.js"></script>
+    <script type="text/javascript" src="/js/mainJS/FiddleTabEditor.js"></script>
+    <script type="text/javascript" src="/js/mainJS/FiddleTabJSConsole.js"></script>
+    <script type="text/javascript" src="/js/mainJS/FiddleTabSandbox.js"></script>
+    <script type="text/javascript" src="/js/mainJS/iframe_drag_handler.js"></script>
+    <script type="text/javascript" src="/js/mainJS/storage_handler.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</body>
+
+</html>

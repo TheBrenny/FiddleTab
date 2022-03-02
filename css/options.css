@@ -1,0 +1,101 @@
+html, body {
+  min-width: 750px;
+  margin:0;
+}
+
+.box-group, .box, .box-group:after, .box:after, .box-group:before, .block:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.box-group {
+  *zoom: 1;
+}
+
+.box-group:before, .box-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.box-group:after {
+  clear: both;
+}
+
+.box-group {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.box-group > .box-group {
+  clear: none;
+  float: left;
+  margin: 0 !important;
+}
+
+.box {
+  float: left;
+  width: 100%;
+  min-height: 150px;
+  white-space: nowrap;
+  overflow:hidden;
+  padding:2px;
+}
+top {
+  margin:-2px -2px 2px -2px;
+  padding: 7.5px 2px;
+  display: block;
+  font-weight: bold;
+  font-size:1.3em;
+  background-color: #DDD;
+  cursor: pointer;
+}
+.box, top {
+  transition: 250ms ease;
+}
+
+.inner-box {
+  display:table;
+  width:100%;
+}
+.b0 *:not(top), .collapsed *:not(top) {
+  display: none;
+}
+.collapsed > *:not(.head) {
+    display:none !important;
+}
+.inner-box .r {
+  display:table-row;
+}
+.inner-box .r * {
+  display:table-cell;
+  vertical-align:middle;
+  word-wrap: normal;
+  width: 100%;
+}
+.inner-box .r .lbl {
+  width: auto;
+}
+
+.b0 {width: 5%;}
+.b1 {width: 25%;}
+.b2 {width: 31.6666667%;}
+.b3 {width: 45%;}
+.b4 {width: 85%;}
+
+.b0 > top {
+  display: inline-block;
+  margin: 0 2px;
+  padding: 0;
+  background-color: transparent;
+  transform-origin: 5px 50%;
+  transform: rotate(90deg);
+}
+.box, .inner-box {
+  border: 1px solid #212121;
+}
+.empty {
+  content: "";
+}

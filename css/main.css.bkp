@@ -1,0 +1,259 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	overflow: hidden;
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+#wrap {
+	width: 100%;
+	height: 100%;
+}
+
+#code_editors {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 60%;
+}
+
+#code_editors .code_box {
+	height: 50%;
+	width: 100%;
+	position: relative;
+}
+.code_box .title {
+	position: absolute;
+	z-index: 10 !important;
+	font-size: 13px;
+	width: 100%;
+	height: 30px;
+	margin: 0;
+	background: #9E9E9E;
+	color: #F5F5F5;
+	/*
+	border-top: 1px solid #B6B6B6;
+	border-bottom: 1px solid #B6B6B6;
+	*/
+}
+
+.code_box .title h3 {
+	position: relative;
+	top: 25%;
+	transform: translateY(-100%);
+}
+
+.code_box .ace-holder {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 30px;
+	bottom: 0;
+	resize: none;
+	border: 0;
+	font-family: monospace;
+	width: inherit;
+}
+
+#output {
+	position: absolute;
+	left: 40%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+#output iframe, .iframe-cover {
+	width: 100%;
+	height: 68%;
+	position: absolute;
+	top: 33%;
+}
+
+#console, #js {
+	height: 33%;
+	position: absolute;
+	width: 50%;
+}
+
+#console {
+	left: 50%;
+}
+
+#output .ace-holder {
+	width: 100%;
+}
+
+.gearbox {
+	margin-top: -48px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 4px;
+}
+
+.gearbox, .gear {
+	width: 20px;
+	height: 20px;
+	float: right;
+	opacity: 0.3;
+}
+.gearbox:hover .gear, .force-gear {
+	animation: roll 3.5s linear infinite;
+	opacity: 1;
+}
+
+.mousenotwork {
+	pointer-events: none;
+}
+.mouseworks {
+	pointer-events: all;
+}
+.iframe-cover * {
+	pointer-events: all;
+}
+.iframe-dragzone .gearbox {
+	margin-top: 0;
+}
+.iframe-dragzone {
+	height: 30px;
+}
+
+.dropdown {
+    z-index: 25;
+    position: absolute;
+    background: #F5F5F5;
+    text-align: center;
+    padding: 7.5px 10px;
+    float: right;
+    right: 1px;
+    top: 32px;
+    width: 50%;
+		transform: scale(1);
+    color: #212121;
+		border-radius: 2px;
+		transition: transform 0.1s ease-out;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.dropdown * {
+	display: inline-block;
+	width: 100%;
+	margin: 2.5px;
+}
+.dropdown ul, .dropdown li {
+	text-align: left;
+	list-style-type: none;
+	padding: 0 0 0 0;
+}
+.dropdown ul a, .dropdown ul span {
+    display: inline;
+}
+.dropdown ul a {
+	width: 20px;
+	height: 20px;
+}
+.dropdown ul a img {
+	width: inherit;
+	height: inherit;
+}
+.dropdown ul span, .dropdown ul a img, .dropdown ul li {
+	vertical-align: middle;
+}
+
+.list-draggable {
+	cursor:move;
+}
+.hovover {
+	border: solid #FF9800 2px;
+}
+.dragElem {
+	opacity: 0.4;
+}
+
+.hidden {
+	transform: scale(0);
+}
+
+.progressbar-text {
+	color: #212121 !important;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	font-size:4vmin;
+}
+
+
+iframe {
+	border: 0;
+}
+
+#overlay {
+	z-index: 26;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	color: #212121;
+}
+
+#overlay .content {
+	position: absolute;
+	width: 75%;
+	height: 85%;
+	top: 7.5%;
+	left: 12.5%;
+	background-color: #F5F5F5;
+}
+
+#overlay .content iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.loading {
+	min-width: 32vmin;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  height: 75%;
+}
+.loading > svg {
+	height: 100%;
+}
+
+#closeOverlay {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+
+.closebtn img {
+	opacity: 0.2;
+	transition: linear 75ms;
+}
+.closebtn:hover img {
+	opacity: 1;
+	transition: linear 75ms;
+}
+.dd-thirds {
+	width: 32%;
+	margin: 0px;
+}
+.dropdown button img {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}

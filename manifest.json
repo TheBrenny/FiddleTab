@@ -1,0 +1,32 @@
+{
+    "name": "__MSG_AppName__",
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "description": "__MSG_AppDescription__",
+    "homepage_url": "https://github.com/TheBrenny/FiddleTab",
+    "icons": {
+        "16": "/img/fiddletab16.png",
+        "19": "/img/fiddletab19.png",
+        "48": "/img/fiddletab48.png",
+        "128": "/img/fiddletab128.png"
+    },
+    "sandbox": {
+        "pages": ["/html/sandbox.html"]
+    },
+    "default_locale": "en",
+    "options_page": "/html/options.html",
+    "options_ui": {
+        "page": "/html/options.html",
+        "chrome_style": true,
+        "open_in_tab": false
+    },
+    "chrome_url_overrides": {
+        "newtab": "/html/newtab.html"
+    },
+    "permissions": [
+        "storage",
+        "unlimitedStorage",
+        "*://*/*"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-7r2McbIWuomqLpEBt52h+IgYBd7RfNIlSfdcrpKKL6s=' 'sha256-azjSm8vdCVqYfgbE8TQzlYjGoe/5JWl/y6sdGo//X7A='; object-src 'self'"
+}
